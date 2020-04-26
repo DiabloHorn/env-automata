@@ -1,0 +1,11 @@
+---
+- name: Test the connection and sudo abilities
+  hosts: all
+  remote_user: miscauto
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: create file 'ansible.tst' in '/root/'
+      copy:
+        content: ansible-test
+        dest: /root/ansible.tst
