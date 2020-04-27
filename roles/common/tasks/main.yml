@@ -1,2 +1,5 @@
 ---
-
+- name: update apt
+  command: apt update
+- name: upgrade packages
+  command: apt upgrade -y

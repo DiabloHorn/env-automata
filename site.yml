@@ -1,9 +1,3 @@
 ---
-- name: configure an ubuntu machine
-  hosts: all
-  remote_user: miscauto
-  become: yes
-  become_method: sudo
-
-  roles:
-    - common
+- import_playbook: user-gui.yml
+- import_playbook: common.yml
