@@ -1,0 +1,22 @@
+---
+- name: install terminator
+  become: yes
+  become_method: sudo
+  apt:
+    name: terminator
+    state: present
+    update_cache: yes
+- name: Copy script to add terminator launcher
+  copy:
+    src: add-launcher.sh
+    dest: /tmp/add-terminator-launcher.sh
+- name: execute script to add launcher
+  command: /bin/bash /tmp/add-terminator-launcher.sh
+- name: delete script
+  file:
+    path: /tmp/add-terminator-launcher.sh
+    state: absent
+- name: Copy terminator config
+  copy:
+    src: terminator
+    dest: "{{ ansible_env.HOME }}/.config" 

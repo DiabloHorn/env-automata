@@ -2,8 +2,6 @@
 - name: configure machine settings of an ubuntu machine
   hosts: all
   remote_user: miscauto
-  become: yes
-  become_method: sudo
 
   roles:
-    - common
+    - terminator

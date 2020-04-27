@@ -1,4 +1,10 @@
 ---
+- name: update apt and packages
+  become: yes
+  become_method: sudo
+  apt:
+    update_cache: yes
+    upgrade: dist
 - name: Set firefox and Nautilus as only favourites
   command: /usr/bin/gsettings set org.gnome.shell favorite-apps "['firefox.desktop','org.gnome.Nautilus.desktop','org.gnome.gedit.desktop','org.gnome.Terminal.desktop']"
 - name: Configure gedit

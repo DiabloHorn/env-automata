@@ -1,3 +1,3 @@
 ---
-- import_playbook: pb_common.yml
 - import_playbook: pb_user-prefs.yml
+- import_playbook: pb_apps.yml
