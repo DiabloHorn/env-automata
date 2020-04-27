@@ -6,6 +6,10 @@ Be aware that this is mainly a project for me to learn ansible and to customize 
 
 I'd only recommend to use this for your play-around VMs, not for production machines
 
+## Setup
+Install ansible
+```sudo ./install-ansible.sh```
+
 ## Running
 Test if your ansible connection to your VM works  
 > ```ansible-playbook -i localVM -k -K playbooks/test-run.yml```
@@ -24,5 +28,5 @@ Run individual playbooks
 * Configure .bashrc and .bashrc.d
   * add ability to rename gnome-terminal tabs
 * Install base apps
-  * terminator
+* Install CLI utilities
 
