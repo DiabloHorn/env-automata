@@ -1,3 +1,0 @@
----
-- name: Set firefox and Nautilus as only favourites
-  command: /usr/bin/gsettings set org.gnome.shell favorite-apps "['firefox.desktop','org.gnome.Nautilus.desktop']"

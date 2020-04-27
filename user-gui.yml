@@ -1,7 +1,0 @@
----
-- name: configure default settings of an ubuntu machine
-  hosts: all
-  remote_user: miscauto
-
-  roles:
-    - user-gui
