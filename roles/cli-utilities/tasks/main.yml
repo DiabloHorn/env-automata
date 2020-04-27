@@ -40,3 +40,10 @@
     name: mysql-client
     state: present
     update_cache: yes
+- name: install vim
+  become: yes
+  become_method: sudo
+  apt:
+    name: vim
+    state: present
+    update_cache: yes

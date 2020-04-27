@@ -1,0 +1,7 @@
+---
+- name: configure machine settings of an ubuntu machine
+  hosts: all
+  remote_user: miscauto
+
+  roles:
+    - firewall-base

@@ -1,1 +1,18 @@
 ---
+- name: install nftables
+  become: yes
+  become_method: sudo
+  apt:
+    name: nftables
+    state: present
+    update_cache: yes
+- name: copy ruleset
+  become: yes
+  become_method: sudo
+  copy:
+    src: nftables.conf
+    dest: /etc/nftables.conf
+- name: apply ruleset
+  become: yes
+  become_method: sudo
+  command: nft -f /etc/nftables.conf
