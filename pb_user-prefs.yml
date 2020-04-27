@@ -1,7 +1,7 @@
 ---
 - name: configure USER settings of an ubuntu machine
   hosts: all
-  remote_user: miscauto
+  remote_user: "{{ rem_ssh_user }}"
 
   roles:
     - user-prefs

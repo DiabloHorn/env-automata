@@ -1,7 +1,7 @@
 ---
 - name: Test the connection and sudo abilities
   hosts: all
-  remote_user: miscauto
+  remote_user: "{{ rem_ssh_user }}"
   become: yes
   become_method: sudo
   tasks:

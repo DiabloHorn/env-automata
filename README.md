@@ -12,13 +12,13 @@ Install ansible
 
 ## Running
 Test if your ansible connection to your VM works  
-> ```ansible-playbook -i localVM -k -K playbooks/test-run.yml```
+> ```ansible-playbook -i localVM -k -K playbooks/test-run.yml --extra-vars "rem_ssh_user=SSH_USERNAME"```
 
 Run the entire playbook
-> ```ansible-playbook -i localVM -k -K site.yml```
+> ```ansible-playbook -i localVM -k -K site.yml --extra-vars "rem_ssh_user=SSH_USERNAME"```
 
 Run individual playbooks
-> ```ansible-playbook -i localVM -k -K pb_user-prefs.yml```
+> ```ansible-playbook -i localVM -k -K pb_user-prefs.yml --extra-vars "rem_ssh_user=SSH_USERNAME"```
 
 ## Activities performed
 
