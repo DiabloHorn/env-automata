@@ -1,0 +1,42 @@
+---
+- name: update apt and packages
+  become: yes
+  become_method: sudo
+  apt:
+    update_cache: yes
+    upgrade: dist
+- name: install tree
+  become: yes
+  become_method: sudo
+  apt:
+    name: tree
+    state: present
+    update_cache: yes
+- name: install tcptraceroute
+  become: yes
+  become_method: sudo
+  apt:
+    name: tcptraceroute
+    state: present
+    update_cache: yes
+- name: install hping3
+  become: yes
+  become_method: sudo
+  apt:
+    name: hping3
+    state: present
+    update_cache: yes
+- name: install jq
+  become: yes
+  become_method: sudo
+  apt:
+    name: jq
+    state: present
+    update_cache: yes
+- name: install mysql client
+  become: yes
+  become_method: sudo
+  apt:
+    name: mysql-client
+    state: present
+    update_cache: yes

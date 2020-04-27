@@ -4,4 +4,5 @@
   remote_user: miscauto
 
   roles:
+    - cli-utilities
     - terminator
