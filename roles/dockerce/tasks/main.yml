@@ -1,0 +1,7 @@
+---
+- name: install docker and docker compose
+  apt:
+    name: docker-compose
+    state: present
+    update_cache: yes
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == "20.04"

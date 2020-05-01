@@ -1,0 +1,10 @@
+---
+- name: configure machine settings of an ubuntu machine
+  hosts: all
+  become: yes
+  become_method: sudo
+  remote_user: "{{ rem_ssh_user }}"
+
+  roles:
+    - dockerce
+

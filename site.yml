@@ -2,3 +2,4 @@
 - import_playbook: pb_hardening.yml
 - import_playbook: pb_user-prefs.yml
 - import_playbook: pb_apps.yml
+- import_playbook: pb_containers.yml
