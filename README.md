@@ -10,7 +10,7 @@ I'd only recommend to use this for your play-around VMs, not for production mach
 Install ansible
 ```sudo ./install-ansible.sh```
 
-## Running
+## Running remote
 Test if your ansible connection to your VM works  
 > ```ansible-playbook -i localVM -k -K playbooks/test-run.yml --extra-vars "rem_ssh_user=SSH_USERNAME"```
 
@@ -19,6 +19,19 @@ Run the entire playbook
 
 Run individual playbooks
 > ```ansible-playbook -i localVM -k -K pb_user-prefs.yml --extra-vars "rem_ssh_user=SSH_USERNAME"```
+
+## Running locally (after zip download or git clone)
+Edit the file localVM and replace the current line with
+> ```localhost ansible_connection=local```
+
+Test if your local ansible connection works  
+> ```ansible-playbook -i localVM -K playbooks/test-run.yml --extra-vars "rem_ssh_user=LOCAL_USERNAME"```
+
+Run the entire playbook
+> ```ansible-playbook -i localVM -K site.yml --extra-vars "rem_ssh_user=LOCAL_USERNAME"```
+
+Run individual playbooks
+> ```ansible-playbook -i localVM -k -K pb_user-prefs.yml --extra-vars "rem_ssh_user=LOCAL_USERNAME"``
 
 ## Activities performed
 
