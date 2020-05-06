@@ -31,7 +31,7 @@ Run the entire playbook
 > ```ansible-playbook -i localVM -K site.yml --extra-vars "rem_ssh_user=LOCAL_USERNAME"```
 
 Run individual playbooks
-> ```ansible-playbook -i localVM -k -K pb_user-prefs.yml --extra-vars "rem_ssh_user=LOCAL_USERNAME"``
+> ```ansible-playbook -i localVM -k -K pb_user-prefs.yml --extra-vars "rem_ssh_user=LOCAL_USERNAME"```
 
 ## Activities performed
 
